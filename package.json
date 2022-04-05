@@ -1,5 +1,6 @@
 {
   "name": "my-portifolio",
+  "homepage": "http://sn0wye.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
