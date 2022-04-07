@@ -1,9 +1,9 @@
-import React from 'react'
-import './about.css'
-import ME from '../../assets/me-about.jpg'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import React from 'react';
+import './about.css';
+import ME from '../../assets/me-about.jpg';
+import { FaAward } from 'react-icons/fa';
+import { FiUsers } from 'react-icons/fi';
+import { VscFolderLibrary } from 'react-icons/vsc';
 
 const About = () => {
   return (
@@ -20,34 +20,37 @@ const About = () => {
 
         <div className="about__content">
           <div className="about__cards">
-          <article className="about__card">
-              <FaAward className="about__icon"/>
+            <article className="about__card">
+              <FaAward className="about__icon" />
               <h5>Experience</h5>
               <small>3+ Years Working</small>
             </article>
 
             <article className="about__card">
-              <FiUsers className="about__icon"/>
+              <FiUsers className="about__icon" />
               <h5>Clients</h5>
               <small>200+ Worldwide</small>
             </article>
 
             <article className="about__card">
-              <VscFolderLibrary className="about__icon"/>
+              <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
               <small>80+ Completed Projects</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laudantium quo, velit fuga enim provident? Culpa aliquam placeat voluptatibus nisi fugiat eius fuga ullam dolor maxime veritatis! Ipsa, vel debitis.
+            I'm the type of guy that learn everything i like amazingly fast, and
+            if I feel passionate about it, I'm gonna give my best.
           </p>
 
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

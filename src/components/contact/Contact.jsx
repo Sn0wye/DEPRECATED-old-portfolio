@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
-import { BsTwitter, BsWhatsapp } from 'react-icons/bs';
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs';
+
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -32,11 +33,11 @@ const Contact = () => {
             <a href="mailto:gabrieltrz2005@gmail.com">Send a Message</a>
           </article>
           <article className="contact__option">
-            <BsTwitter className="contact__option-icon" />
-            <h4>Twitter</h4>
-            <h5>@trzimajewskigab</h5>
+            <BsLinkedin className="contact__option-icon" />
+            <h4>LinkedIn</h4>
+            <h5>Gabriel Trzimajewski</h5>
             <a
-              href="https://twitter.com/gabtrzimajewski"
+              href="https://www.linkedin.com/in/gabriel-trzimajewski/"
               target="_blank"
               rel="noreferrer"
             >

@@ -1,8 +1,7 @@
 import React from 'react';
 import './footer.css';
-import { FaFacebookF } from 'react-icons/fa';
-import { FiInstagram } from 'react-icons/fi';
-import { IoLogoTwitter } from 'react-icons/io';
+import { MdOutlineEmail } from 'react-icons/md';
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -15,21 +14,21 @@ const Footer = () => {
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#services">Services</a>
+        {/* <a href="#services">Services</a> */}
         <a href="#portfolio">Portfolio</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </ul>
 
       <div className="footer__socials">
-        <a href="https://facebook.com">
-          <FaFacebookF />
+        <a href="mailto:gabrieltrz2005@gmail.com">
+          <MdOutlineEmail />
         </a>
-        <a href="https://instagram.com">
-          <FiInstagram />
+        <a href="https://www.linkedin.com/in/gabriel-trzimajewski/">
+          <BsLinkedin />
         </a>
-        <a href="https://twitter.com">
-          <IoLogoTwitter />
+        <a href="https://api.whatsapp.com/send?phone=+5547988330284">
+          <BsWhatsapp />
         </a>
       </div>
 
