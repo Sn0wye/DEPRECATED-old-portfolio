@@ -1,5 +1,5 @@
 import React from 'react';
-import './testimonials.css';
+import './reviews.css';
 import AVTR1 from '../../assets/avatar1.jpg';
 import AVTR2 from '../../assets/avatar2.jpg';
 import AVTR3 from '../../assets/avatar3.jpg';
@@ -43,9 +43,9 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials">
+    <section id="reviews">
       <h5>Review from clients</h5>
-      <h2>Testimonials</h2>
+      <h2>Reviews</h2>
 
       <Swiper
         className="container testimonials__container"
