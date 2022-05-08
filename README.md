@@ -1,4 +1,5 @@
-## TODOS
-- [ ] Add a margin-top for the first h2
-- [ ] Import a database for the data on the Portfolio section
-- [ ] Import a database for the data on the Testimonials section
+# This is my portfolio
+## To-dos
+- [ ] Add services via api
+- [ ] Add recent work via api
+- [ ] Add skills via api
