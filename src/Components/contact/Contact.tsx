@@ -42,7 +42,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Send a Message{" "}
+              Send a Message
             </a>
           </article>
           <article className="contact__option">
