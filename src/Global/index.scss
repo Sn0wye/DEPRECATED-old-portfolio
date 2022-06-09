@@ -12,8 +12,13 @@
 html {
   scroll-behavior: smooth;
 }
-::webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 1rem;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-bg-variant;
+  border-radius: 1rem;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -91,6 +96,9 @@ img {
   .container {
     width: $container-width-md;
   }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   section {
     margin-top: 6rem;
@@ -101,6 +109,10 @@ img {
 @media screen and (max-width: 600px) {
   .container {
     width: $container-width-sm;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   section > h2 {
