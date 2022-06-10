@@ -1,57 +1,37 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import "./reviews.scss";
 
-// import Swiper core and required modules
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-// type Data = {
-//   id: number;
-//   name: string;
-//   avatar: string;
-//   review: string;
-// }[];
+import { supabase } from "../../services/supabase-config";
 
-const data = [
-  {
-    id: 1,
-    avatar:
-      "https://media.gettyimages.com/photos/smiling-young-female-afro-owner-against-white-background-picture-id1277534997?s=2048x2048",
-    name: "Tina Snow",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dolor reiciendis saepe laborum error id fugit sequi aperiam, quibusdam velit cupiditate? Voluptas dignissimos quo alias repellendus neque dicta ab.",
-  },
-  {
-    id: 2,
-    avatar:
-      "https://media.gettyimages.com/photos/smiling-young-female-afro-owner-against-white-background-picture-id1277534997?s=2048x2048",
-    name: "Bob Taylor",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dolor reiciendis saepe laborum error id fugit sequi aperiam, quibusdam velit cupiditate? Voluptas dignissimos quo alias repellendus neque dicta ab.",
-  },
-  {
-    id: 3,
-    avatar:
-      "https://media.gettyimages.com/photos/smiling-young-female-afro-owner-against-white-background-picture-id1277534997?s=2048x2048",
-    name: "Will Smith",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dolor reiciendis saepe laborum error id fugit sequi aperiam, quibusdam velit cupiditate? Voluptas dignissimos quo alias repellendus neque dicta ab.",
-  },
-  {
-    id: 4,
-    avatar:
-      "https://media.gettyimages.com/photos/smiling-young-female-afro-owner-against-white-background-picture-id1277534997?s=2048x2048",
-    name: "Melinda Gates",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dolor reiciendis saepe laborum error id fugit sequi aperiam, quibusdam velit cupiditate? Voluptas dignissimos quo alias repellendus neque dicta ab.",
-  },
-];
+type Review = {
+  id: string;
+  name: string;
+  review: string;
+  avatar: string;
+};
 
 const Testimonials: React.FC = () => {
+  const [reviews, setReviews] = useState<Review[] | null>(null);
+  async function fetchReviews() {
+    try {
+      const { data, error } = await supabase.from("Reviews").select("*");
+      if (error) throw error;
+      setReviews(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useLayoutEffect(() => {
+    fetchReviews();
+  }, []);
+
   return (
     <section id="reviews">
       <h5>Review from clients</h5>
@@ -65,17 +45,18 @@ const Testimonials: React.FC = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
       >
-        {data.map(({ avatar, name, review, id }) => {
-          return (
-            <SwiperSlide key={id} className="testimonial">
-              <div className="client__avatar">
-                <img src={avatar} alt={name} />
-              </div>
-              <h5 className="client__name">{name}</h5>
-              <small className="client__review">{review}</small>
-            </SwiperSlide>
-          );
-        })}
+        {reviews &&
+          reviews.map(({ avatar, name, review, id }) => {
+            return (
+              <SwiperSlide key={id} className="testimonial">
+                <div className="client__avatar">
+                  <img src={avatar} alt={name} />
+                </div>
+                <h5 className="client__name">{name}</h5>
+                <small className="client__review">{review}</small>
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </section>
   );
