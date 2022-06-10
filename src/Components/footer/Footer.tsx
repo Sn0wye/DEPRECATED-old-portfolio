@@ -6,28 +6,46 @@ import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className="footer__logo">
+      <a aria-label="Go back to the top" href="#" className="footer__logo">
         Gabriel Trzimajewski
       </a>
 
       <ul className="permalinks">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
         {/* <a href="#services">Services</a> */}
-        <a href="#portfolio">Portfolio</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#reviews">Reviews</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
 
       <div className="footer__socials">
-        <a href="mailto:gabrieltrz2005@gmail.com">
+        <a aria-label="Send me an email" href="mailto:gabrieltrz2005@gmail.com">
           <MdOutlineEmail />
         </a>
-        <a href="https://www.linkedin.com/in/gabriel-trzimajewski/">
+        <a
+          aria-label="LinkedIn Profile"
+          href="https://www.linkedin.com/in/gabriel-trzimajewski/"
+        >
           <BsLinkedin />
         </a>
-        <a href="https://api.whatsapp.com/send?phone=+5547988330284">
+        <a
+          aria-label="Send me a WhatsApp message"
+          href="https://api.whatsapp.com/send?phone=+5547988330284"
+        >
           <BsWhatsapp />
         </a>
       </div>

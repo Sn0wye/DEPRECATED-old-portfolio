@@ -9,6 +9,7 @@ const Nav = () => {
   return (
     <nav>
       <a
+        aria-label="Go to Home Section"
         href="#"
         onClick={() => setActiveNav("#")}
         className={activeNav === "#" ? "active" : ""}
@@ -16,6 +17,7 @@ const Nav = () => {
         <AiOutlineHome />
       </a>
       <a
+        aria-label="Go to About Section"
         href="#about"
         onClick={() => setActiveNav("#about")}
         className={activeNav === "#about" ? "active" : ""}
@@ -23,6 +25,7 @@ const Nav = () => {
         <AiOutlineUser />
       </a>
       <a
+        aria-label="Go to Experience Section"
         href="#experience"
         onClick={() => setActiveNav("#experience")}
         className={activeNav === "#experience" ? "active" : ""}
@@ -30,10 +33,12 @@ const Nav = () => {
         <BiBook />
       </a>
       {/* <a
+        aria-label="Go to Services Section"
       href="#services"
       onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}
       > <RiServiceLine/> </a> */}
       <a
+        aria-label="Go to Contact Section"
         href="#contact"
         onClick={() => setActiveNav("#contact")}
         className={activeNav === "#contact" ? "active" : ""}

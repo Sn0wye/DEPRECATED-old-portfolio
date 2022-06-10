@@ -9,10 +9,16 @@ const HeaderSocials = () => {
         href="https://www.linkedin.com/in/gabriel-trzimajewski/"
         target="_blank"
         rel="noreferrer"
+        aria-label="Linkedin Profile"
       >
         <BsLinkedin />
       </a>
-      <a href="https://github.com/sn0wye" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/sn0wye"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Github Profile"
+      >
         <FaGithub />
       </a>
     </div>

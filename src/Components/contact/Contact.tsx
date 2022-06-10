@@ -31,13 +31,19 @@ const Contact = () => {
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>gabrieltrz2005@gmail.com</h5>
-            <a href="mailto:gabrieltrz2005@gmail.com">Send a Message</a>
+            <a
+              aria-label="Send me an email"
+              href="mailto:gabrieltrz2005@gmail.com"
+            >
+              Send a Message
+            </a>
           </article>
           <article className="contact__option">
             <BsLinkedin className="contact__option-icon" />
             <h4>LinkedIn</h4>
             <h5>Gabriel Trzimajewski</h5>
             <a
+              aria-label="Linkedin Profile"
               href="https://www.linkedin.com/in/gabriel-trzimajewski/"
               target="_blank"
               rel="noreferrer"
@@ -50,6 +56,7 @@ const Contact = () => {
             <h4>WhatsApp</h4>
             <h5>+55 (47) 98833-0248</h5>
             <a
+              aria-label="Send me a WhatsApp message"
               href="https://api.whatsapp.com/send?phone=+5547988330284"
               target="_blank"
               rel="noreferrer"
