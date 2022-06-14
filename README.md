@@ -13,4 +13,7 @@ It was my first time using some new dependencies like Emailjs and Swiper.js.
 - Emailjs
 - Supabase (for DB and API)
 
+## Feel free to contribute and send Pull Requests, any help is welcome.
+
+### [Check it out!](https://sn0wye-portfolio.vercel.app/)
 
