@@ -35,7 +35,7 @@ const Reviews = () => {
 
   return (
     <section id="reviews">
-      <h5>Review from clients</h5>
+      <h5>Review from people who know me</h5>
       <h2>Reviews</h2>
 
       <Swiper
