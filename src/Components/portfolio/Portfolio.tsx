@@ -3,7 +3,7 @@ import "./portfolio.scss";
 import { supabase } from "../../services/supabase-config";
 
 type PortfolioData = {
-  id: string;
+  id: number;
   image: string;
   title: string;
   github: string;
@@ -16,13 +16,12 @@ const Portfolio = () => {
   );
 
   async function fetchPortfolioData() {
-    try {
-      const { data, error } = await supabase.from("Portfolio").select("*");
-      if (error) throw error;
-      setPortfolioData(data);
-    } catch (error) {
-      console.log(error);
-    }
+    const { data, error } = await supabase
+      .from("Portfolio")
+      .select("*")
+      .order("id");
+    if (error) console.log(error);
+    setPortfolioData(data);
   }
 
   useLayoutEffect(() => {
@@ -35,37 +34,36 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-        {portfolioData &&
-          portfolioData.map(({ id, image, title, github, demo }) => {
-            return (
-              <article key={id} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={image} alt={title} />
-                </div>
-                <h3>{title}</h3>
-                <div className="portfolio__item-cta">
-                  <a
-                    aria-label="Open GitHub repository"
-                    href={github}
-                    target="_blank"
-                    className="btn"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    aria-label="Open live demo"
-                    href={demo}
-                    className="btn btn-primary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
-                </div>
-              </article>
-            );
-          })}
+        {portfolioData?.map(({ id, image, title, github, demo }) => {
+          return (
+            <article key={id} className="portfolio__item">
+              <div className="portfolio__item-image">
+                <img src={image} alt={title} />
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio__item-cta">
+                <a
+                  aria-label="Open GitHub repository"
+                  href={github}
+                  target="_blank"
+                  className="btn"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  aria-label="Open live demo"
+                  href={demo}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
