@@ -40,7 +40,18 @@ const About = () => {
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>A wide variety of projects. Check out my Github!</small>
+              <small>
+                A wide variety of projects. Check out my
+                <a
+                  aria-label="Go to my Github"
+                  href="https://github.com/Sn0wye"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+                !
+              </small>
             </article>
           </div>
 
