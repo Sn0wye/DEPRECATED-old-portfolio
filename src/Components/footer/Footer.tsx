@@ -42,12 +42,6 @@ const Footer = () => {
         >
           <BsLinkedin />
         </a>
-        <a
-          aria-label="Send me a WhatsApp message"
-          href="https://api.whatsapp.com/send?phone=+5547988330284"
-        >
-          <BsWhatsapp />
-        </a>
       </div>
 
       <div className="footer__copyright">

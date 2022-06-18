@@ -51,19 +51,6 @@ const Contact = () => {
               Send a Message
             </a>
           </article>
-          <article className="contact__option">
-            <BsWhatsapp className="contact__option-icon" />
-            <h4>WhatsApp</h4>
-            <h5>+55 (47) 98833-0248</h5>
-            <a
-              aria-label="Send me a WhatsApp message"
-              href="https://api.whatsapp.com/send?phone=+5547988330284"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send a Message
-            </a>
-          </article>
         </div>
         <form ref={form} onSubmit={(e) => sendEmail(e)}>
           <input
