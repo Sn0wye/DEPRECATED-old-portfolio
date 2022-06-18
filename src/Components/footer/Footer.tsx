@@ -33,7 +33,7 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a aria-label="Send me an email" href="mailto:gabrieltrz2005@gmail.com">
+        <a aria-label="Send me an email" href="mailto:gabrielsnowye@gmail.com">
           <MdOutlineEmail />
         </a>
         <a

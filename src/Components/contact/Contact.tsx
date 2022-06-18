@@ -30,10 +30,10 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>gabrieltrz2005@gmail.com</h5>
+            <h5>gabrielsnowye@gmail.com</h5>
             <a
               aria-label="Send me an email"
-              href="mailto:gabrieltrz2005@gmail.com"
+              href="mailto:gabrielsnowye@gmail.com"
             >
               Send a Message
             </a>
