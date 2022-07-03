@@ -1,54 +1,54 @@
 import React, { useState } from "react";
-import "./nav.scss";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
+import { StyledNavbar, StyledNavbarLink } from "./style";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
-    <nav>
-      <a
+    <StyledNavbar>
+      <StyledNavbarLink
         aria-label="Go to Home Section"
         href="#"
         onClick={() => setActiveNav("#")}
-        className={activeNav === "#" ? "active" : ""}
+        state={activeNav === "#" ? "active" : undefined}
       >
         <AiOutlineHome />
-      </a>
-      <a
+      </StyledNavbarLink>
+      <StyledNavbarLink
         aria-label="Go to About Section"
         href="#about"
         onClick={() => setActiveNav("#about")}
-        className={activeNav === "#about" ? "active" : ""}
+        state={activeNav === "#about" ? "active" : undefined}
       >
         <AiOutlineUser />
-      </a>
-      <a
+      </StyledNavbarLink>
+      <StyledNavbarLink
         aria-label="Go to Experience Section"
         href="#experience"
         onClick={() => setActiveNav("#experience")}
-        className={activeNav === "#experience" ? "active" : ""}
+        state={activeNav === "#experience" ? "active" : undefined}
       >
         <BiBook />
-      </a>
-      <a
+      </StyledNavbarLink>
+      <StyledNavbarLink
         aria-label="Go to Portfolio Section"
         href="#portfolio"
         onClick={() => setActiveNav("#portfolio")}
-        className={activeNav === "#portfolio" ? "active" : ""}
+        state={activeNav === "#portfolio" ? "active" : undefined}
       >
         <RiServiceLine />
-      </a>
-      <a
+      </StyledNavbarLink>
+      <StyledNavbarLink
         aria-label="Go to Contact Section"
         href="#contact"
         onClick={() => setActiveNav("#contact")}
-        className={activeNav === "#contact" ? "active" : ""}
+        state={activeNav === "#contact" ? "active" : undefined}
       >
         <BiMessageSquareDetail />
-      </a>
-    </nav>
+      </StyledNavbarLink>
+    </StyledNavbar>
   );
 };
 
