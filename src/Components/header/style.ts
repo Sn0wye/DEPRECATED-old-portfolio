@@ -2,7 +2,6 @@ import { styled } from "../../Global/stitches";
 
 const StyledHeader = styled("header", {
   height: "100vh",
-  paddingTop: "7rem",
   overflow: "hidden",
   textAlign: "center",
   position: "relative",
@@ -14,7 +13,7 @@ const StyledHeaderSocials = styled("div", {
   alignItems: "center",
   gap: "0.8rem",
   position: "absolute",
-  left: 0,
+  left: "5rem",
   bottom: "3rem",
   "&::after": {
     content: "",
@@ -38,10 +37,10 @@ const ScrollDownLink = styled("a", {
   color: "$primary",
   transition: "$transition",
   position: "absolute",
-  right: "-2.3rem",
+  right: "5rem",
   bottom: "5rem",
   transform: "rotate(90deg)",
-  fontWeight: " 300",
+  fontWeight: "300",
   fontSize: "0.9rem",
   "&:hover": {
     color: "$white",
@@ -52,7 +51,7 @@ const ScrollDownLink = styled("a", {
 });
 
 const StyledMeImg = styled("div", {
-  background: "linear-gradient($color-primary, transparent)",
+  background: "linear-gradient($primary, transparent)",
   width: "22rem",
   position: "absolute",
   left: "calc(50% - 11rem)",
