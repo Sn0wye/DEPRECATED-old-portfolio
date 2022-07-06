@@ -25,6 +25,7 @@ const StyledNavbarLink = styled("a", {
   transition: "$transition",
   "&:hover": {
     backgroundColor: "rgba(0, 0, 0, 0.3)",
+    color: "$white",
   },
   variants: {
     state: {
