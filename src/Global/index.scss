@@ -59,32 +59,7 @@ section > h5 {
 .text-light {
   color: $color-light;
 }
-a {
-  color: $color-primary;
-  transition: $transition;
-  &:hover {
-    color: $color-white;
-  }
-}
-.btn {
-  width: max-content;
-  display: inline-block;
-  color: $color-primary;
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  border: 1px solid $color-primary;
-  transition: $transition;
-  &:hover {
-    background: $color-white;
-    color: $color-bg;
-    border-color: transparent;
-  }
-}
-.btn-primary {
-  background: $color-primary;
-  color: $color-bg;
-}
+
 img {
   display: block;
   width: 100%;
