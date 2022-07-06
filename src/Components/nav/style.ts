@@ -22,7 +22,7 @@ const StyledNavbarLink = styled("a", {
   display: "flex",
   color: "$light",
   fontSize: "1.1rem",
-
+  transition: "$transition",
   "&:hover": {
     backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
