@@ -53,7 +53,7 @@ const Portfolio = () => {
                   target="_blank"
                   className="btn"
                   rel="noreferrer"
-                  color="primary"
+                  type="button"
                 >
                   GitHub
                 </Link>
@@ -64,6 +64,7 @@ const Portfolio = () => {
                   target="_blank"
                   rel="noreferrer"
                   color="primary"
+                  type="button"
                 >
                   Live Demo
                 </Link>
