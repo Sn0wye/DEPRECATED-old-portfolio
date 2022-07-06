@@ -36,6 +36,17 @@ const Link = styled("a", {
         background: "$primary",
         color: "$bg",
       },
+      bg: {
+        color: "$bg",
+      },
+      secondary: {
+        background: "transparent",
+        color: "$primary",
+        "&:hover": {
+          color: "$bg",
+          background: "$white",
+        },
+      },
     },
     type: {
       button: {
