@@ -51,9 +51,9 @@ const Portfolio = () => {
                   aria-label="Open GitHub repository"
                   href={github}
                   target="_blank"
-                  className="btn"
                   rel="noreferrer"
                   type="button"
+                  color="secondary"
                 >
                   GitHub
                 </Link>

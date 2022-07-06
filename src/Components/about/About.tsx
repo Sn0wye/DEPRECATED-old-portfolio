@@ -4,6 +4,7 @@ import ME from "../../Assets/me-about.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import { Link } from "../styled/Button";
 
 const About = () => {
   return (
@@ -42,14 +43,14 @@ const About = () => {
               <h5>Projects</h5>
               <small>
                 A wide variety of projects. Check out my{" "}
-                <a
+                <Link
                   aria-label="Go to my Github"
                   href="https://github.com/Sn0wye"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Github
-                </a>
+                </Link>
                 !
               </small>
             </article>
@@ -67,9 +68,9 @@ const About = () => {
             <cite>- Napoleon Hill</cite>
           </p>
 
-          <a href="#contact" className="btn btn-primary">
+          <Link href="#contact" type="button" color="primary">
             Let&apos;s Talk
-          </a>
+          </Link>
         </div>
       </div>
     </section>

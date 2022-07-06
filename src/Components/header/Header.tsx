@@ -3,6 +3,7 @@ import "./header.scss";
 import CTA from "./CTA";
 import ME from "../../Assets/me.png";
 import HeaderSocial from "./HeaderSocials";
+import { ScrollDownLink } from "./style";
 
 const Header = () => {
   return (
@@ -18,9 +19,7 @@ const Header = () => {
           <img src={ME} alt="Gabriel Trzimajewski Photo" />
         </div>
 
-        <a href="#contact" className="scroll__down">
-          Scroll Down
-        </a>
+        <ScrollDownLink href="#contact">Scroll Down</ScrollDownLink>
       </div>
     </header>
   );

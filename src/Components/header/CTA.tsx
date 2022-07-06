@@ -1,12 +1,18 @@
 import React from "react";
 import CV from "../../Assets/CV - Gabriel Trzimajewski.pdf";
+import { Link } from "../styled/Button";
 
 const CTA = () => {
   return (
     <div className="cta">
-      <a href="#contact" className="btn btn-primary" aria-label="Contact me">
+      <Link
+        type="button"
+        color="primary"
+        href="#contact"
+        aria-label="Contact me"
+      >
         Contact
-      </a>
+      </Link>
     </div>
   );
 };

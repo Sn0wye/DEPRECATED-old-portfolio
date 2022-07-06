@@ -4,6 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
 import emailjs from "emailjs-com";
+import { Button, Link } from "../styled/Button";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -31,25 +32,25 @@ const Contact = () => {
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>gabrielsnowye@gmail.com</h5>
-            <a
+            <Link
               aria-label="Send me an email"
               href="mailto:gabrielsnowye@gmail.com"
             >
               Send a Message
-            </a>
+            </Link>
           </article>
           <article className="contact__option">
             <BsLinkedin className="contact__option-icon" />
             <h4>LinkedIn</h4>
             <h5>Gabriel Trzimajewski</h5>
-            <a
+            <Link
               aria-label="Linkedin Profile"
               href="https://www.linkedin.com/in/gabriel-trzimajewski/"
               target="_blank"
               rel="noreferrer"
             >
               Send a Message
-            </a>
+            </Link>
           </article>
         </div>
         <form ref={form} onSubmit={(e) => sendEmail(e)}>
@@ -66,9 +67,9 @@ const Contact = () => {
             placeholder="Your Message"
             required
           ></textarea>
-          <button type="submit" className="btn btn-primary">
+          <Button type="submit" color="primary">
             Send Message
-          </button>
+          </Button>
         </form>
       </div>
     </section>
