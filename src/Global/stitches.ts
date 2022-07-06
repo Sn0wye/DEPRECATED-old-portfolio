@@ -19,4 +19,8 @@ export const { styled, css } = createStitches({
       containerSm: "90%",
     },
   },
+  media: {
+    sm: "(max-width: 600px)",
+    md: "(max-width: 1024px)",
+  },
 });
