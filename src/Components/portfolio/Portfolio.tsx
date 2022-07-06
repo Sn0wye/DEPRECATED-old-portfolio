@@ -1,6 +1,13 @@
 import React, { useLayoutEffect, useState } from "react";
-import "./portfolio.scss";
 import { supabase } from "../../services/supabase-config";
+import { Link } from "../styled/Button";
+import {
+  PortfolioContainer,
+  PortfolioItem,
+  PortfolioItemCTA,
+  PortfolioItemImage,
+  PortfolioItemTitle,
+} from "./style";
 
 type PortfolioData = {
   id: number;
@@ -33,38 +40,38 @@ const Portfolio = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio__container">
+      <PortfolioContainer>
         {portfolioData?.map(({ id, image, title, github, demo }) => {
           return (
-            <article key={id} className="portfolio__item">
-              <div className="portfolio__item-image">
-                <img src={image} alt={title} />
-              </div>
-              <h3>{title}</h3>
-              <div className="portfolio__item-cta">
-                <a
+            <PortfolioItem key={id} className="portfolio__item">
+              <PortfolioItemImage src={image} alt={title} />
+              <PortfolioItemTitle>{title}</PortfolioItemTitle>
+              <PortfolioItemCTA>
+                <Link
                   aria-label="Open GitHub repository"
                   href={github}
                   target="_blank"
                   className="btn"
                   rel="noreferrer"
+                  color="primary"
                 >
                   GitHub
-                </a>
-                <a
+                </Link>
+                <Link
                   aria-label="Open live demo"
                   href={demo}
                   className="btn btn-primary"
                   target="_blank"
                   rel="noreferrer"
+                  color="primary"
                 >
                   Live Demo
-                </a>
-              </div>
-            </article>
+                </Link>
+              </PortfolioItemCTA>
+            </PortfolioItem>
           );
         })}
-      </div>
+      </PortfolioContainer>
     </section>
   );
 };
