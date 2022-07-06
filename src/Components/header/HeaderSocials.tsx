@@ -2,10 +2,11 @@ import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "../styled/Button";
+import { StyledHeaderSocials } from "./style";
 
 const HeaderSocials = () => {
   return (
-    <div className="header__socials">
+    <StyledHeaderSocials>
       <Link
         href="https://www.linkedin.com/in/gabriel-trzimajewski/"
         target="_blank"
@@ -22,7 +23,7 @@ const HeaderSocials = () => {
       >
         <FaGithub />
       </Link>
-    </div>
+    </StyledHeaderSocials>
   );
 };
 

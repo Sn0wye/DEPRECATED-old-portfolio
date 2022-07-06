@@ -1,10 +1,10 @@
 import React from "react";
-import CV from "../../Assets/CV - Gabriel Trzimajewski.pdf";
 import { Link } from "../styled/Button";
+import { StyledCTA } from "./style";
 
 const CTA = () => {
   return (
-    <div className="cta">
+    <StyledCTA>
       <Link
         type="button"
         color="primary"
@@ -13,7 +13,7 @@ const CTA = () => {
       >
         Contact
       </Link>
-    </div>
+    </StyledCTA>
   );
 };
 
