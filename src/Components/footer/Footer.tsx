@@ -1,22 +1,29 @@
 import React from "react";
-import "./footer.scss";
 import { MdOutlineEmail } from "react-icons/md";
-import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { Link } from "../styled/Button";
+import {
+  FooterCopyright,
+  FooterLogo,
+  FooterSocials,
+  FooterSocialsIcon,
+  Permalinks,
+  StyledFooter,
+} from "./style";
 
 const Footer = () => {
   return (
-    <footer>
-      <Link
+    <StyledFooter>
+      <FooterLogo
         color="bg"
         aria-label="Go back to the top"
         href="#"
         className="footer__logo"
       >
         Gabriel Trzimajewski
-      </Link>
+      </FooterLogo>
 
-      <ul className="permalinks">
+      <Permalinks>
         <li>
           <Link color="bg" href="#">
             Home
@@ -32,7 +39,7 @@ const Footer = () => {
             Experience
           </Link>
         </li>
-        {/* <a href="#services">Services</a> */}
+        {/* <Link href="#services">Services</Link> */}
         <li>
           <Link color="bg" href="#portfolio">
             Portfolio
@@ -48,29 +55,27 @@ const Footer = () => {
             Contact
           </Link>
         </li>
-      </ul>
+      </Permalinks>
 
-      <div className="footer__socials">
-        <Link
+      <FooterSocials>
+        <FooterSocialsIcon
           aria-label="Send me an email"
           href="mailto:gabrielsnowye@gmail.com"
-          color="bg"
         >
           <MdOutlineEmail />
-        </Link>
-        <Link
+        </FooterSocialsIcon>
+        <FooterSocialsIcon
           aria-label="LinkedIn Profile"
           href="https://www.linkedin.com/in/gabriel-trzimajewski/"
-          color="bg"
         >
           <BsLinkedin />
-        </Link>
-      </div>
+        </FooterSocialsIcon>
+      </FooterSocials>
 
-      <div className="footer__copyright">
+      <FooterCopyright>
         <small>&copy; Sn0wye/Gabriel Trzimajewski. All rights reserved.</small>
-      </div>
-    </footer>
+      </FooterCopyright>
+    </StyledFooter>
   );
 };
 
