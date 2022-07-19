@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Components/header/Header";
 import Nav from "./Components/nav/Nav";
 import About from "./Components/about/About";
-import Experience from "./Components/experience/Experience";
+import { Experience } from "./Components/Experience";
 import Services from "./Components/services/Services";
 import Portfolio from "./Components/portfolio/Portfolio";
 import Reviews from "./Components/reviews/Reviews";
